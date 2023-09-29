@@ -2,13 +2,15 @@
 
 trivialBuild rec {
   pname = "straight.el";
-  version = "20220901.0";
+  version = "20230929.0";
   ename = pname;
   patches = [ ./nogit.patch ];
   src = fetchFromGitHub {
     owner = "raxod502";
     repo = "straight.el";
-    rev = "e20a44c4ac5c04896aecd43a5fdd12c67527c69e";
-    sha256 = "sha256-kNBdlEfG+RAE+iA8OKOhqmPiZEjjV24r6ziE9Y5ZdVg=";
+    rev = "079626673687caba2a7dc8394d057f5672cc799b";
+    sha256 = "11vjv5dgjkiw8jjy9irk16kadl32mzxgs8fm2x5jgylnri18igch";
+    # date = "2023-08-11T17:15:48-07:00";
+    # branch = "develop";
   };
 }
