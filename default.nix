@@ -16,11 +16,11 @@
 let
   libstraight = epkgs.callPackage ./libstraight.nix { inherit abortOnNotFound epkgs emacs; };
   epkgs =
-    if !(emacsPackages ? straight) then
+    # if !(emacsPackages ? straight) then
       emacsPackages.overrideScope' (self: super:
-        { straight = self.callPackage ./straight {  }; })
-    else
-      emacsPackages;
+        { straight = self.callPackage ./straight {  }; });
+    # else
+    #   emacsPackages;
 
 
   packageJSON = libstraight.packagesJSON {
